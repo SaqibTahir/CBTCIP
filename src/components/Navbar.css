@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* nav main css--------------------- */
+nav{
+    background-color:#fbf3f2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 30px;
+    box-shadow: 1px 0px 5px grey;
+
+}
+.changeit{
+    background-color: #282828;
+}
+
+/* class title css------------------------------ */
+.title img{
+    width: 60px;
+}
+.title h1{
+    color:rgb(90, 90, 243) ;
+    font-size: 1.7rem;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+/*  class container css------------------- */
+.container img{
+    width: 50px;
+    cursor: pointer;
+}
+ul{
+    margin: 0 30px;
+}
+ li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+ li a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: rgb(90, 90, 243) ;
+}
+ li a:hover {
+   border-bottom:3px solid rgb(90, 90, 243) ;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* class hamo css-------------------- */
+.hamo img{
+    width: 35px;
+}
+.hamo {
+   position: absolute;
+   top: 8px;
+   right: 25px;
+   display: none;
+}
+
+/* responsivnes css------------------------- */
+@media (max-width: 850px) {
+    .hamo {
+        display: flex;
+     }
+     nav{
+        flex-direction: column;
+        align-items: start;
+    }
+    .container{
+       flex-direction: column;
+       display: none;
+    }
+    .openit{
+       display: flex;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    ul li {
+        margin: 15px 0;
+    }
+    .title h1{
+        font-size: 1.4rem;
+    }
+    li a {
+        font-size: 1rem;       
+    } 
+    .container img{
+        width: 40px;
+    }
+
+    
+}

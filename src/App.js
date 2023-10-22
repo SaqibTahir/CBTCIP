@@ -1,24 +1,54 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import Project from './components/Project';
+import Services from './components/Services';
+import dark from './components/dark.png'
+import light from './components/light.png'
+import { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
+  const [pic, setpic] = useState(dark);
+  const [mode, setmode] = useState(false);
+  const [strok, setstrok] = useState('rgb(90, 90, 243)');  
+
+  // change mode function------------------
+  const navtheme = () => {
+    if (mode === false) {
+      setpic(light)
+      setstrok('#895575')
+      document.body.style.backgroundColor = '	rgb(56,56,56)'
+    } else {
+      setpic(dark)
+      setstrok('rgb(90, 90, 243)')
+      document.body.style.backgroundColor = ''
+    }
+    setmode(!mode)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+         <Navbar navtheme={navtheme} mode={mode} pic={pic} />
+      <div>
+        <Routes>
+          <Route exact path="/About" element={<About mode={mode} strok={strok}/>} />
+          <Route exact path="/" element={<Home mode={mode} />} />
+          <Route exact path="/Contact" element={<Contact mode={mode} />} />
+          <Route exact path="/Services" element={<Services mode={mode} />} />
+          <Route exact path="/Projects" element={<Project mode={mode} />} />
+        </Routes>
+
+        
+      </div>
+      <Footer mode={mode}/>
+    </Router>
   );
 }
 
