@@ -32,7 +32,7 @@ export default function Project(props) {
             <div className="prj-child" style={{backgroundColor:props.mode ? '#282828':'' , borderBottom: props.mode ? '5px solid white' : ''}}>
                 <img src={port} alt="" />
                 <span style={{color:props.mode ? 'white':''}}>Portfolio Web Application Using React.js</span>
-                <a href=""><button>Go To</button></a>
+                <a href="https://github.com/SaqibTahir/My-Portfolio"><button>Go To</button></a>
             </div>
             <div className="prj-child" style={{backgroundColor:props.mode ? '#282828':'' , borderBottom: props.mode ? '5px solid white' : ''}}>
                 <img src={uni} alt="" />
