@@ -36,7 +36,7 @@ export default function Project(props) {
             </div>
             <div className="prj-child" style={{backgroundColor:props.mode ? '#282828':'' , borderBottom: props.mode ? '5px solid white' : ''}}>
                 <img src={uni} alt="" />
-                <span style={{color:props.mode ? 'white':''}}>E-Commerce Design using HTML,CSS & Javascript</span>
+                <span style={{color:props.mode ? 'white':''}}>ECommerce Design using HTML,CSS & Javascript</span>
                 <a href="https://github.com/SaqibTahir/e-commerce"><button>Go To</button></a>
             </div>
             <div className="prj-child" style={{backgroundColor:props.mode ? '#282828':'' , borderBottom: props.mode ? '5px solid white' : ''}}>
